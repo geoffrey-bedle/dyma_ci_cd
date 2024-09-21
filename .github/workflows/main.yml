@@ -3,7 +3,7 @@ on: [push]
 env:
   VAR_1: from workflow
 jobs: 
-  say-hello:
+  deploy:
     env: 
       VAR_2: from job
     runs-on: ubuntu-latest
