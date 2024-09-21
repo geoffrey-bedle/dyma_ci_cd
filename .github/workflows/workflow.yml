@@ -4,7 +4,7 @@ env:
   VAR_1: from workflow
 jobs:
   deploy:
-    if: ${{ github.ref === 'refs/heads/main' }}
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - run: echo deploy in prod
