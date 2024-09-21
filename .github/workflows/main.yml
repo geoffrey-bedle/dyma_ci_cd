@@ -26,5 +26,6 @@ jobs:
           echo ${{ 'main' == 'top' }}
           echo ${{ contains(github.ref, 'main') }}
           echo 'toto'
+      - run : echo ${{ contains(github.ref, 'main') }}
           
 
