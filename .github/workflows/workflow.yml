@@ -4,9 +4,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo build in prod
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo deploy in prod
+      - id: step1
+        run: echo ${{ GITHUB_ENV }}
+      - id: step2
+        run: echo build in prod
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo deploy in prod
