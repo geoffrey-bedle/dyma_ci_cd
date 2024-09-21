@@ -30,5 +30,7 @@ jobs:
       - run : echo ${{ 'main' == 'top' }}
       - run : echo ${{ 42 }}
       - run : exit 1
+      - run : echo TOTO
+        if: always()
           
 
