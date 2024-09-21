@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: step1
-        run: echo ${{ GITHUB_ENV }}
+        run: echo $GITHUB_ENV
       - id: step2
         run: echo build in prod
   # deploy:
