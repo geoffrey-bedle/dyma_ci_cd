@@ -14,7 +14,7 @@ jobs:
         uses: actions/cache@v3
         with:
           key: ${{ runner.os }}-${{ hashFiles('./vite-project/package-lock.json') }}
-          path: .:vim-project/.npm
+          path: ./vim-project/.npm
       - name: install dependencies
         run: npm ci --cache .npm
         working-directory: ./vite-project
