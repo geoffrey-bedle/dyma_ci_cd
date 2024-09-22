@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo ::notice::Un message d'information
-          echo ::warning::Un message d'avertissement        
-          echo ::error::Un message d'erreur
+          echo ::notice::"Un message d'information"
+          echo ::warning::"Un message d'avertissement"        
+          echo ::error::"Un message d'erreur"
