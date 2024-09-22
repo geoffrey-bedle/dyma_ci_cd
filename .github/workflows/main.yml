@@ -6,10 +6,13 @@ jobs:
   command:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo ::notice::Un message d\'information
-          echo ::warning::Un message d\'avertissement
-          echo ::error::Un message d\'erreur
-        
+      - name: install nodejs
+        uses: actions/setup-node@v4
+      - name: fetch repository
+        uses: actions/checkout@v4
+      - name: install dependencies
+        run: npm install
+        working-directory: ./vite-projetc
+
   
     
