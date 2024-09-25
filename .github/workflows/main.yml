@@ -6,4 +6,11 @@ jobs:
   token_job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo Hello world !
+      - uses: actions/checkout@v4
+      - run: |
+          echo 123 > test.txt
+          git congif --global user.email "geoffrey@toto.fr"
+          git congif --global user.name "Geoffrey"
+          git add test.txt
+          git commit -m "Add test.txt"
+          git push origin main
